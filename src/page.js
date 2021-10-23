@@ -14,21 +14,20 @@ export default class Page extends React.Component {
 
     render() {
         return (
-            <div>
-                <button onClick={() => this.styleMichel()}>Michel</button>
-                <button onClick={() => this.styleClaude()}>Claude</button>
-                <Board className={this.state.className}/>
+            <div className="page">
+                <button onClick={() => this.profilMichel()}>Michel</button>
+                <button onClick={() => this.profilClaude()}>Claude</button>
+                <Board className={this.state.profil}/>
             </div>
         );
     }
 
-    styleMichel() {
-        this.setState({className: 'Michel'})
+    profilMichel() {
         console.log('Wesh')
     }
 
-    styleClaude(){
-        this.setState({className: 'Claude'});
+    profilClaude(){
+        
 
     }
 }

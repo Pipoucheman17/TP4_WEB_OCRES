@@ -38,18 +38,21 @@
 }
 
 
-.board{
+.page{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+
+}
+
+.board > main {
   width: 400px;
   height: 400px;
-}
-
-.claude > main{
-  background-color: #fff;
 
 }
 
-.claude > main > button{
-  width: 100px;
-  height: 100px;
-  
+ .claude{
+  background-color: #61dafb;
+
 }
+
