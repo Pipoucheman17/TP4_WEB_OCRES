@@ -1,17 +1,11 @@
 import './App.css';
-import Button from './button.js';
-import Board from './board.js';
+import Page from './page.js';
 
 function App() {
   return (
     <div>
-      <Button name="Jeanne" />
-      <Button name="Martine" />
-      <Button name="Claude" />
-      <Board />
+      <Page></Page>
     </div>
-
-
   );
 }
 

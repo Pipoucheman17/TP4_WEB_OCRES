@@ -43,3 +43,13 @@
   height: 400px;
 }
 
+.claude > main{
+  background-color: #fff;
+
+}
+
+.claude > main > button{
+  width: 100px;
+  height: 100px;
+  
+}

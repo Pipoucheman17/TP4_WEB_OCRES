@@ -1,9 +1,11 @@
 import React from 'react';
+import profil from './profil-de-lutilisateur.png';
+
 
 export default class Picture extends React.Component {
     render() {
         return (
-            <div></div>
+            <img src={profil} width="80px" alt=""></img>
         );
     }
 }
