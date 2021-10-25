@@ -6,7 +6,11 @@ export default class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: "#ff1234",
+      styleMain:{
+      backgroundColor: "#ff0000",
+      margin:"auto",
+      
+      }
     }
   }
 
@@ -17,8 +21,7 @@ export default class Board extends React.Component {
     for (let i = 0; i < 6; i++) {
       styleBckg += chaine.charAt(Math.random() * (15-1)+1);
     }
-    this.setState({ backgroundColor: styleBckg });
-    
+    this.setState({styleMain: ({ backgroundColor: styleBckg })});
   }
 
 
@@ -26,10 +29,10 @@ export default class Board extends React.Component {
     // let profil = this.props.profil;
 
     return (
-      <div className="board" style={{background : this.state.backgroundColor}}>
+      <main className="board" style={ this.state.styleMain}>
         <button onClick={() => this.changeStyle()}>Change Style </button>
         <Picture />
-      </div>
+      </main>
     );
   }
 }
