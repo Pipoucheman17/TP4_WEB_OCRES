@@ -30,6 +30,7 @@ export default class Board extends React.Component {
 
     return (
       <main className="board" style={ this.state.styleMain}>
+        <p>Nom : {this.props.profile.nom}</p>
         <button onClick={() => this.changeStyle()}>Change Style </button>
         <Picture />
       </main>
