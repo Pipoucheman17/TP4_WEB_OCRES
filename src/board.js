@@ -26,13 +26,15 @@ export default class Board extends React.Component {
 
 
   render() {
-    // let profil = this.props.profil;
 
     return (
       <main className="board" style={ this.state.styleMain}>
-        <p>Nom : {this.props.profile.nom}</p>
+         <Picture />
+        <p>Nom : {this.props.profil.nom}</p>
+        <p>Prénom : {this.props.profil.prenom}</p>
+        <p>Date de naissance : {this.props.profil.age}</p>  
         <button onClick={() => this.changeStyle()}>Change Style </button>
-        <Picture />
+       
       </main>
     );
   }

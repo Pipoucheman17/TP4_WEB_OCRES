@@ -7,16 +7,14 @@ export default class Page extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            className: 'page',
+            Buttonstyle: 'col-3 buttonName',
             profil: {
-                nom: "Home",
-                prenom: "Page",
-                datedenaissance: "",
+                nom: "Durant",
+                prenom: "Michel",
+                age: "23/04/1979",
+                className2: "board",
                 backgroundColor: "#ff0000",
-                className2: "board"
             }
-
-
         };
     }
 
@@ -24,27 +22,17 @@ export default class Page extends React.Component {
 
     render() {
         return (
-            <div className={this.state.className}>
-                <button className="buttonName" onClick={() => this.homePage()}>HomePage</button>
-                <button className="buttonName" onClick={() => this.profilMichel()}>Michel</button>
-                <button className="buttonName" onClick={() => this.profilClaude()}>Claude</button>
-                <button className="buttonName" onClick={() => this.profilClaude()}>Anne</button>
-                <Board profile={this.state.profil} className={this.state.profil.className2} />
+            <div className="container-fluid">
+                <div className="row justify-content-around">
+                    <button className={this.state.Buttonstyle} onClick={() => this.profilMichel()}>Michel</button>
+                    <button className={this.state.Buttonstyle} onClick={() => this.profilClaude()}>Claude</button>
+                    <button className={this.state.Buttonstyle} onClick={() => this.profilAnne()}>Anne</button>
+                </div>
+                <Board profil={this.state.profil} className={this.state.profil.className2} />
             </div>
         );
     }
 
-    homePage() {
-        this.setState({
-            profil: {
-                nom: "Home",
-                prenom: "Page",
-                age: "",
-                backgroundColor: "#ff0000",
-                className2: "board"
-            }
-        })
-    }
 
     profilMichel() {
         this.setState({
@@ -66,6 +54,17 @@ export default class Page extends React.Component {
                 className2: "board"
             }
         });
+    }
+
+    profilAnne(){
+        this.setState({
+            profil: {
+                nom:"Lamarre",
+                prenom:"Anne",
+                age:"12/12/1976",
+                className2:"board"
+            }
+        })
     }
 
     refresh() {
