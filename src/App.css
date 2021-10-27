@@ -37,17 +37,44 @@
   }
 }
 
-
-
-.buttonName{
-  justify-self:center;
-  border-radius: 5px;
+.buttonName {
+  justify-self: center;
+  border-radius: 10px;
   background-color: lightblue;
   margin-bottom: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
+}
+
+.buttonName:hover{
+  background-color: rgb(141, 174, 185);
+}
+
+.board {
+  border-radius: 10px;
+  border: rgb(58, 107, 199) solid 6px;
 }
 
 
- .board{
-  justify-content:center;
+.buttonStyle{
+  border-radius: 10px;
+  border:rgb(58, 107, 199) 3px solid;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  align-self: flex-start;
+}
+
+
+.banner{
+  background-color: rgb(58, 107, 199);
   text-align: center;
- }
+  font-size: larger;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+.tweet{
+  border-radius: 10px;
+  margin-top: 30px;
+  border: solid rgb(207, 44, 44) 3px;
+  background-color: sandybrown;
+}
