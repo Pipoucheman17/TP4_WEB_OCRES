@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './board.js';
+import Tweet from './Tweet.js';
 
 
 export default class Page extends React.Component {
@@ -13,7 +14,7 @@ export default class Page extends React.Component {
                 prenom: "Michel",
                 age: "23/04/1979",
                 className2: "board",
-                backgroundColor: "#ff0000",
+                backgroundColor: "#ffffff",
             }
         };
     }
@@ -29,6 +30,7 @@ export default class Page extends React.Component {
                     <button className={this.state.Buttonstyle} onClick={() => this.profilAnne()}>Anne</button>
                 </div>
                 <Board profil={this.state.profil} className={this.state.profil.className2} />
+                <Tweet/>
             </div>
         );
     }
