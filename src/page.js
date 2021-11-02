@@ -22,7 +22,7 @@ export default class Page extends React.Component {
 
     render() {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid" style={{padding: "10%", paddingTop: "0%"}}>
                 <div className="row justify-content-around">
                     <button className={this.state.Buttonstyle} onClick={() => this.profilMichel()}>Michel</button>
                     <button className={this.state.Buttonstyle} onClick={() => this.profilClaude()}>Claude</button>
