@@ -7,7 +7,7 @@ export default class Tweet extends React.Component {
         super(props);
         this.state = {
             LikebuttonStyle: "container-fluid",
-            likes :this.props.likes,
+            likes: this.props.likes,
         };
     }
 
@@ -16,8 +16,10 @@ export default class Tweet extends React.Component {
         return (
             <div className="container-fluid tweet">
                 <div>
-                    <img src={Omnes} width="80%" alt="Omnes"/>
-                    <button className={this.state.buttonClassName} style={{margin:"10px"}} onClick={()=> this.addLikes()} >Likes {this.state.likes}</button>
+                    <img src={Omnes} width="80%" alt="Omnes" />
+                    <button className={this.state.LikebuttonStyle} style={{ margin: "10px" }} onClick={() => this.addLikes()} >
+                        Likes {this.state.likes}
+                    </button>
                 </div>
 
             </div>
@@ -25,7 +27,7 @@ export default class Tweet extends React.Component {
     }
 
     addLikes() {
-        this.setState({likes: this.state.likes +1})
+        this.setState({ likes: this.state.likes + 1 });
     }
 
     handleChange(event) {

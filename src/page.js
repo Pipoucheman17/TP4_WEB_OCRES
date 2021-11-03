@@ -31,7 +31,7 @@ export default class Page extends React.Component {
                     <button className={this.state.Buttonstyle} onClick={() => this.profilAnne()}>Anne</button>
                 </div>
                 <Board profil={this.state.profil} className={this.state.profil.className2} />
-                <Tweet likes={this.state.profil.likes} />
+                <Tweet likes={this.state.profil.likes} onChange={this.handleTweetChange} />
             </div>
         );
     }
