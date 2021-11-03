@@ -1,7 +1,6 @@
 import React from 'react';
 import Board from './board.js';
-import Tweet from './Tweet.js';
-
+import Omnes from './Omnes.PNG';
 
 export default class Page extends React.Component {
 
@@ -14,9 +13,9 @@ export default class Page extends React.Component {
                 prenom: "Michel",
                 age: "23/04/1979",
                 className2: "board",
-                likes: 0,
                 backgroundColor: "#ffffff",
-            }
+            },
+            likeTable: { profil1: 0, profil2: 0, profil3: 0, },
         };
     }
 
@@ -31,17 +30,64 @@ export default class Page extends React.Component {
                     <button className={this.state.Buttonstyle} onClick={() => this.profilAnne()}>Anne</button>
                 </div>
                 <Board profil={this.state.profil} className={this.state.profil.className2} />
-                <Tweet likes={this.state.profil.likes} onChange={this.handleTweetChange} />
+                <div className="container-fluid tweet">
+                    <div>
+                        <img src={Omnes} width="80%" alt="Omnes" />
+                        <button className={this.state.LikebuttonStyle} style={{ margin: "10px" }} onClick={() => this.addLikes()} >
+                            Likes {this.diplayLikes()}
+                        </button>
+
+                    </div>
+
+                </div>
+
             </div>
         );
     }
 
-    handleChangeLikes(likes) {
-        this.setState({
-            profil: {
-                likes: likes
-            }
-        });
+
+    addLikes() {
+        if (this.state.profil.prenom === "Michel") {
+            this.setState({
+                likeTable: {
+                    profil1: this.state.likeTable.profil1 + 1,
+                    profil2: this.state.likeTable.profil2,
+                    profil3: this.state.likeTable.profil3
+                }
+            });
+        }
+        if (this.state.profil.prenom === "Claude") {
+            this.setState({
+                likeTable: {
+                    profil1: this.state.likeTable.profil1,
+                    profil2: this.state.likeTable.profil2 + 1,
+                    profil3: this.state.likeTable.profil3
+                }
+            });
+        }
+        if (this.state.profil.prenom === "Anne") {
+            this.setState({
+                likeTable: {
+                    profil1: this.state.likeTable.profil1,
+                    profil2: this.state.likeTable.profil2,
+                    profil3: this.state.likeTable.profil3 + 1,
+                }
+            });
+        }
+        this.diplayLikes();
+    }
+
+
+    diplayLikes() {
+        if (this.state.profil.prenom === "Michel") {
+            return this.state.likeTable.profil1;
+        }
+        if (this.state.profil.prenom === "Claude") {
+            return this.state.likeTable.profil2;
+        }
+        if (this.state.profil.prenom === "Anne") {
+            return this.state.likeTable.profil3;
+        }
     }
 
     profilMichel() {
@@ -62,7 +108,6 @@ export default class Page extends React.Component {
                 prenom: "Claude",
                 age: "13/06/1975",
                 className2: "board",
-
             }
         });
     }
